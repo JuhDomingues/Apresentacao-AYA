@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 222 47% 35%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 222 65% 55%;
+
+    --secondary: 215 25% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 215 25% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 215 85% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 25% 90%;
+    --input: 215 25% 90%;
+    --ring: 222 47% 35%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(222 47% 35%) 0%, hsl(222 65% 55%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(222 47% 35%) 0%, hsl(222 65% 45%) 50%, hsl(215 85% 50%) 100%);
+    --gradient-card: linear-gradient(to bottom, hsl(0 0% 100%) 0%, hsl(215 25% 98%) 100%);
+    
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(222 47% 35% / 0.2);
+    --shadow-glow: 0 0 40px hsl(222 65% 55% / 0.3);
+    --shadow-card: 0 4px 20px hsl(222 47% 35% / 0.08);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 222 47% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 222 47% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 222 47% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 222 65% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 222 65% 65%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 215 85% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 222 65% 55%;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(222 65% 55%) 0%, hsl(222 65% 65%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(222 47% 12%) 0%, hsl(222 65% 35%) 50%, hsl(215 85% 40%) 100%);
+    --gradient-card: linear-gradient(to bottom, hsl(222 47% 12%) 0%, hsl(222 47% 15%) 100%);
+    
+    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 40px hsl(222 65% 55% / 0.4);
+    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}
