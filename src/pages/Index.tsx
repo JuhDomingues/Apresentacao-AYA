@@ -4,6 +4,7 @@ import Problems from "@/components/Problems";
 import Solution from "@/components/Solution";
 import Architecture from "@/components/Architecture";
 import UseCases from "@/components/UseCases";
+import SuccessCases from "@/components/SuccessCases";
 import Advantages from "@/components/Advantages";
 import Contact from "@/components/Contact";
 
@@ -16,6 +17,7 @@ const Index = () => {
       <Solution />
       <Architecture />
       <UseCases />
+      <SuccessCases />
       <Advantages />
       <Contact />
     </div>

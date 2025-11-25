@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import ayaLogo from "@/assets/AYA b 1.png";
+import seidorLogo from "@/assets/LOGO_COLOR_NEGATIVE.png";
 import light01 from "@/assets/Lights/01.png";
 import light05 from "@/assets/Lights/05.png";
 import light08 from "@/assets/Lights/08.png";
@@ -33,10 +34,16 @@ const Hero = () => {
       <div className="container relative z-10 px-6 py-20">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Logo */}
-          <div className="flex justify-center mb-8 animate-fade-in">
-            <img 
-              src={ayaLogo} 
-              alt="AYA by SEIDOR" 
+          <div className="flex justify-center items-center gap-8 mb-8 animate-fade-in">
+            <img
+              src={ayaLogo}
+              alt="AYA"
+              className="h-24 w-auto drop-shadow-2xl"
+            />
+            <div className="h-16 w-px bg-primary-foreground/30" />
+            <img
+              src={seidorLogo}
+              alt="SEIDOR"
               className="h-24 w-auto drop-shadow-2xl"
             />
           </div>

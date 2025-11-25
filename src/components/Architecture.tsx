@@ -1,12 +1,15 @@
 import { Card } from "@/components/ui/card";
-import { Brain, Cloud, Database, Workflow } from "lucide-react";
+import { Cloud, Database, Workflow } from "lucide-react";
 import light06 from "@/assets/Lights/06.png";
 import light09 from "@/assets/Lights/09.png";
+import logoChatGPT from "@/assets/logos IAs/logo-chatgpt.png";
+import logoClaude from "@/assets/logos IAs/Claude_AI_logo.png";
+import logoGemini from "@/assets/logos IAs/logo Gemini.png";
 
 const integrations = [
-  { name: "OpenAI GPT", icon: Brain },
-  { name: "Anthropic Claude", icon: Brain },
-  { name: "Google Gemini", icon: Brain },
+  { name: "OpenAI GPT", logo: logoChatGPT },
+  { name: "Anthropic Claude", logo: logoClaude },
+  { name: "Google Gemini", logo: logoGemini },
   { name: "APIs REST", icon: Workflow },
   { name: "Serviços Cloud", icon: Cloud },
   { name: "Sistemas Legados", icon: Database },
@@ -58,13 +61,19 @@ const Architecture = () => {
               {/* Left Column */}
               <div className="space-y-4">
                 {integrations.slice(0, 3).map((integration, index) => (
-                  <Card 
+                  <Card
                     key={index}
                     className="p-6 gradient-card border-primary/10 shadow-card hover:shadow-elegant transition-smooth hover:translate-x-2"
                   >
-                    <div className="flex items-center gap-4">
-                      <integration.icon className="w-6 h-6 text-primary" />
-                      <span className="font-semibold text-foreground">{integration.name}</span>
+                    <div className="flex items-center justify-center">
+                      {integration.logo ? (
+                        <img src={integration.logo} alt={integration.name} className="h-8 w-auto object-contain" />
+                      ) : (
+                        <div className="flex items-center gap-4">
+                          <integration.icon className="w-6 h-6 text-primary" />
+                          <span className="font-semibold text-foreground">{integration.name}</span>
+                        </div>
+                      )}
                     </div>
                   </Card>
                 ))}
@@ -81,13 +90,19 @@ const Architecture = () => {
               {/* Right Column */}
               <div className="space-y-4">
                 {integrations.slice(3).map((integration, index) => (
-                  <Card 
+                  <Card
                     key={index}
                     className="p-6 gradient-card border-primary/10 shadow-card hover:shadow-elegant transition-smooth hover:-translate-x-2"
                   >
-                    <div className="flex items-center gap-4">
-                      <integration.icon className="w-6 h-6 text-primary" />
-                      <span className="font-semibold text-foreground">{integration.name}</span>
+                    <div className="flex items-center justify-center">
+                      {integration.logo ? (
+                        <img src={integration.logo} alt={integration.name} className="h-8 w-auto object-contain" />
+                      ) : (
+                        <div className="flex items-center gap-4">
+                          <integration.icon className="w-6 h-6 text-primary" />
+                          <span className="font-semibold text-foreground">{integration.name}</span>
+                        </div>
+                      )}
                     </div>
                   </Card>
                 ))}
